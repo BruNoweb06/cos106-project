@@ -1,0 +1,208 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fixed minor typo from previous box-shadow rule */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #0f2b5c; /* Miva Deep Blue */
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    border-left: 4px solid #c0392b; /* Crimson Accent Line */
+    padding-left: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #c0392b; /* Miva Crimson Red Active States */
+}
+
+#menu-toggle, .menu-icon {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #0f2b5c, #1a417a); /* Deep Blue Gradient */
+    color: #fff;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #ecf0f1;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #c0392b; /* Crimson Red Button */
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #a62c22; /* Darker Red Hover */
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Welcome Section */
+.welcome {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.welcome h2 {
+    margin-bottom: 1rem;
+    color: #0f2b5c; /* Deep Blue Header */
+}
+
+/* Highlights Section */
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 4px solid #c0392b; /* Crimson Accent Top Border */
+}
+
+.card h3 {
+    margin-bottom: 0.8rem;
+    color: #0f2b5c;
+}
+
+/* Quote Section */
+.quote {
+    background-color: #fdf2f2; /* Light Pinkish/Red Tint Box */
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-style: italic;
+    border-left: 5px solid #c0392b; /* Crimson Quote Bar */
+}
+
+blockquote {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #0f2b5c; /* Deep Blue Footer */
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 3px solid #c0392b; /* Top Crimson Accent */
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 1.8rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #0f2b5c;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}

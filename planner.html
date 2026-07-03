@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Planner | BruNoweb Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific page styles for the interactive elements */
+        .planner-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-top: 5px solid #c0392b;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 0.7rem;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .input-group input:focus {
+            border-color: #0f2b5c;
+            outline: none;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            border-bottom: 1px solid #eee;
+            gap: 10px;
+        }
+        .task-item.completed span {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+        .task-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        .complete-btn {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .delete-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <h1>BruNoweb Portfolio</h1>
+    </div>
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html" class="active">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="welcome">
+    <h2>Interactive Academic Planner</h2>
+    <p>Keep track of your study sessions, coding benchmarks, and university task management goals in real-time.</p>
+</section>
+
+<main style="padding: 0 1rem;">
+    <div class="planner-container">
+        <h3 style="color: #0f2b5c; margin-bottom: 1rem;">📝 Target Task Manager</h3>
+        
+        <!-- Form to Add Tasks -->
+        <div class="input-group">
+            <input type="text" id="task-input" placeholder="Enter a new academic task (e.g., Complete Python Lab)...">
+            <button id="add-btn" class="btn" style="padding: 0.7rem 1.2rem; margin: 0;">Add Task</button>
+        </div>
+
+        <!-- Task List container where JS will inject items -->
+        <ul id="task-list" class="task-list">
+            <!-- Simulated starting tasks -->
+            <li class="task-item">
+                <span>Review COS106 Web Portfolio requirements</span>
+                <div class="task-buttons">
+                    <button class="complete-btn" onclick="this.parentElement.parentElement.classList.toggle('completed')">✓</button>
+                    <button class="delete-btn" onclick="this.parentElement.parentElement.remove()">✗</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 BruNoweb Portfolio. All Rights Reserved.</p>
+</footer>
+
+<!-- Linking to our external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>

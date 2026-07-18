@@ -6,7 +6,6 @@
     <title>Academic Planner | BruNoweb Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Specific page styles for the interactive elements */
         .planner-container {
             max-width: 600px;
             margin: 2rem auto;
@@ -97,21 +96,18 @@
 <main style="padding: 0 1rem;">
     <div class="planner-container">
         <h3 style="color: #0f2b5c; margin-bottom: 1rem;">📝 Target Task Manager</h3>
-        
-        <!-- Form to Add Tasks -->
+
         <div class="input-group">
             <input type="text" id="task-input" placeholder="Enter a new academic task (e.g., Complete Python Lab)...">
             <button id="add-btn" class="btn" style="padding: 0.7rem 1.2rem; margin: 0;">Add Task</button>
         </div>
 
-        <!-- Task List container where JS will inject items -->
         <ul id="task-list" class="task-list">
-            <!-- Simulated starting tasks -->
             <li class="task-item">
                 <span>Review COS106 Web Portfolio requirements</span>
                 <div class="task-buttons">
-                    <button class="complete-btn" onclick="this.parentElement.parentElement.classList.toggle('completed')">✓</button>
-                    <button class="delete-btn" onclick="this.parentElement.parentElement.remove()">✗</button>
+                    <button class="complete-btn">✓</button>
+                    <button class="delete-btn">✗</button>
                 </div>
             </li>
         </ul>
@@ -122,7 +118,6 @@
     <p>&copy; 2026 BruNoweb Portfolio. All Rights Reserved.</p>
 </footer>
 
-<!-- Linking to our external JavaScript file -->
 <script src="script.js"></script>
 </body>
 </html>
